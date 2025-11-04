@@ -228,7 +228,8 @@ h2{
     }
 
     header {
-        flex: 0 0 auto;  /* الهيدر ثابت فوق */
+        position: fixed;
+        top: 0;
     }
 
     header h1 {

@@ -1,0 +1,91 @@
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  
+  .slide {
+    display: none;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+  }
+  
+  /* أزرار السابق / التالي */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s;
+    user-select: none;
+    background: rgba(0,0,0,0.4);
+    border-radius: 5px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.7);
+  }
+  
+  /* النقاط */
+  .dots {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* تأثير النعومة */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1s;
+  }
+  
+  @keyframes fade {
+    from {opacity: 0.4;}
+    to {opacity: 1;}
+  }
+
+  @media(max-width: 480px) {
+    .slideshow-container {
+        position: relative;
+        top: 50px;
+        max-width: 800px;
+        margin: 60px auto;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      }
+  }

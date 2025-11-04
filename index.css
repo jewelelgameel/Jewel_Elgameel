@@ -28,13 +28,20 @@ body::before {
     height: 100%;
     z-index: -1;
 }
+.header{
+    padding-top: 100px;
+}
 
 header{
+    position: absolute;
+    top: 0;
     color: #C6A136;
     margin-bottom: 30px;
     background-color: #1E2A38;
     padding: 15px 0;
     border-radius: 8px;
+    width: 100%;
+    
 }
 
 .header-logo{
@@ -109,7 +116,8 @@ h2{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100%;        
+        width: 100%;
+             
     }
     header{
         position: absolute;
@@ -211,8 +219,25 @@ h2{
 
 @media (min-width: 769px) and (max-width: 1024px) {
     body {
-        font-size: 17px;
-        padding: 20px;
+        
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        inset: 0;
+        opacity: 0.2;
+        background-image: url("jewel.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 120%;
+        height: 125%;
+        z-index: -1;
+    }
+
+    .header{
+        padding-top: 80px;
     }
 
     header {
@@ -238,6 +263,6 @@ h2{
     }
 
     h2 {
-        margin: 12px 0;
+        margin: 8px 0;
     }
 }

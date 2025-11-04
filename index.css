@@ -173,17 +173,8 @@ h2{
 }  */
 
 
-
 @media (max-width: 480px) {
-    body {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      min-height: 100vh;
-      padding-top: 100px; /* عشان نسيب مساحة للهيدر */
-    }
-  
+    /* نخلي الهيدر ثابت فوق */
     header {
       position: fixed;
       top: 0;
@@ -192,20 +183,33 @@ h2{
       z-index: 10;
     }
   
+    /* نخلي الجسم يدي مساحة تحت الهيدر */
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f9eed3;
+      min-height: 100vh;
+      padding-top: 90px; /* نفس ارتفاع الهيدر تقريبًا */
+    }
+  
+    /* نخلي الكونتينر ياخد الطول المتبقي كله */
     .a-container {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      height: calc(100vh - 150px); /* الطول المتبقي بعد الهيدر */
+      justify-content: space-evenly; /* توزيع متساوي */
+      align-items: center;
       width: 100%;
-      padding: 10px 0;
+      flex: 1;
+      padding: 20px 0;
     }
   
+    /* الزرار ياخد العرض الكامل تقريبا */
     .btn {
-      width: 80%;
-      margin: 10px auto;
-      padding: 20px 0;
+      width: 85%;
+      padding: 25px 0;
       font-size: 18px;
+      border-radius: 12px;
     }
   }
 
